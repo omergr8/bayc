@@ -1,0 +1,101 @@
+.cMain {
+  color: white;
+  margin-top: 50px;
+}
+.input h3 {
+  font-weight: 600;
+  font-size: 14px;
+  font-style: italic;
+  color: white;
+  margin-left: 5px;
+}
+.input1 {
+  width: 280px;
+  height: 20px;
+  padding-right: 50px;
+  background-color: #272626;
+  border-color: #272626;
+}
+
+.input2 {
+  margin-left: -50px !important;
+  height: 25px !important;
+  width: 50px !important;
+  background: #4b4a4a !important;
+  border-radius: 0 !important;
+  color: white !important;
+  border: 0 !important;
+  -webkit-appearance: none;
+}
+.input22 {
+  background: #4b4a4a !important;
+  border-radius: 0;
+}
+.footerBorder {
+  margin-bottom: 20px;
+}
+.divider2 {
+  background: white !important;
+}
+.lastGrid h5 {
+  margin-left: 30px;
+  font-weight: 200;
+  line-height: 0px;
+  font-size: 11px;
+}
+.terms {
+  /* margin-left: 45px !important; */
+  text-decoration: underline;
+}
+@media only screen and (max-width: 1055px) {
+  .input1 {
+    width: 280px;
+    height: 30px;
+    padding-right: 50px;
+    background-color: #272626;
+    border-color: #272626;
+  }
+
+  .input2 {
+    margin-left: -50px !important;
+    height: 35px !important;
+    width: 50px !important;
+    background: #4b4a4a !important;
+    border-radius: 0 !important;
+    color: white !important;
+    border: 0 !important;
+    -webkit-appearance: none;
+  }
+  .cMain {
+    display: none;
+  }
+  .mainMobile {
+    display: block !important;
+  }
+}
+.mainMobile {
+  display: none;
+  text-align: center;
+  color: white !important;
+  margin-top: 150px;
+}
+.mobileImage {
+  position: absolute;
+  width: 90%;
+  margin-top: -220px;
+}
+.mobileInput h3 {
+  font-weight: 600;
+  font-size: 14px;
+  font-style: italic;
+  color: white;
+  margin-left: 5px;
+  margin-top: 120px;
+}
+.mobileIcons {
+  margin-top: 30px;
+}
+.mobileFooterText {
+  display: flex;
+  justify-content: space-between;
+}

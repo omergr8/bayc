@@ -1,0 +1,22 @@
+.cMain {
+  color: white;
+  /* text-align: left; */
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+.cMain h1,
+p {
+  text-align: left;
+}
+.button {
+  background-color: #bfc500 !important;
+  border-radius: 8px !important;
+  color: black !important;
+  border: 0 !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  padding: 3% !important;
+  margin: auto auto !important;
+  margin-top: 15px !important;
+  width: 70% !important;
+}

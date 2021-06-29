@@ -1,0 +1,14 @@
+.cMain {
+  color: white;
+  /* text-align: left; */
+  padding-bottom: 20px;
+  margin-top: 40px;
+}
+.cMain h1,
+p {
+  text-align: left;
+}
+.heading1 {
+  line-height: 20px;
+  font-style: italic;
+}

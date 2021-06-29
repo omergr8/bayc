@@ -1,0 +1,14 @@
+.cMain {
+  color: white;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+.resetButton {
+  min-width: 180px !important;
+  color: black !important;
+  background-color: #bfc500 !important;
+  padding: 10px !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+}

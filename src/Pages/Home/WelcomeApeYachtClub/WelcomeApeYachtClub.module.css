@@ -1,0 +1,70 @@
+.cMain {
+  color: white;
+  text-align: left;
+  padding-bottom: 20px;
+  margin-top: 30px;
+}
+.heading1 {
+  line-height: 35px;
+  font-style: italic;
+}
+.fairHeading {
+  line-height: 15px;
+  font-style: italic;
+  color: #bfc500;
+}
+.fairPara {
+  line-height: 15px;
+  font-style: italic;
+}
+.fairSpan {
+  font-size: 0.8em;
+  font-style: italic;
+  font-weight: 200;
+}
+.banner {
+  min-height: 120px;
+  background-color: #bfc500;
+  color: black;
+  margin-bottom: 40px;
+}
+.banner h2 {
+  font-style: italic;
+}
+.banner p {
+  max-width: 300px;
+}
+.grid {
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
+}
+.buyButton {
+  background-color: black !important;
+  color: #bfc500 !important;
+  max-width: 200px !important;
+}
+@media only screen and (max-width: 1055px) {
+  /* .heading2 {
+    line-height: 35px;
+    font-style: italic;
+  } */
+  .banner {
+    margin-top: 50px !important;
+  }
+  .banner p {
+    margin-top: 0px;
+    text-align: center;
+    width: 85%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .banner h2 {
+    margin-bottom: 0;
+  }
+  .buyButton {
+    max-width: 250px !important;
+    padding: 3% !important;
+  }
+}

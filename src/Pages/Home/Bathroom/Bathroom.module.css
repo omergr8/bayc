@@ -1,0 +1,13 @@
+.cMain {
+  color: white;
+  /* text-align: left; */
+  padding-bottom: 30px;
+  margin-top: 30px;
+}
+.cMain h1,
+p {
+  text-align: left;
+}
+.gridImage {
+  margin-top: 30px;
+}
