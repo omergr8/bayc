@@ -5,20 +5,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { imagesList } from "../../../Constants/Image";
 import { filterGalleryImages } from "../../../Constants/FilterGalleryImages";
-// import f3 from "../../../../public";
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: "center",
-    color: theme.palette.text.secondary,
-  },
-}));
 
 const GalleryImages = (props) => {
-  //   const classes = useStyles();
   const [initial, setInitial] = useState(0);
   const [final, setFinal] = useState(20);
   const [hasmore, setHasmore] = useState(true);
@@ -26,9 +14,24 @@ const GalleryImages = (props) => {
   const [items, setItems] = useState(imagelist.slice(initial, final));
   useEffect(() => {
     const filteredImages = filterGalleryImages(props);
-    console.log("props effect", filteredImages);
+
     setInitial(0);
     setFinal(20);
+    if (filteredImages.length <= 20) {
+      setHasmore(false);
+      // setInitial(0);
+      // setFinal(filteredImages.length);
+      // console.log(
+      //   filteredImages.length,
+      //   filteredImages.slice(initial, final),
+      //   filteredImages.slice(0, filteredImages.length),
+      //   initial,
+      //   final
+      // );
+    } else {
+      setHasmore(true);
+    }
+
     if (
       props.background === "" &&
       props.character === "" &&
@@ -36,8 +39,10 @@ const GalleryImages = (props) => {
       props.righthand === "" &&
       props.lefthand === "" &&
       props.wrist === "" &&
-      props.item === ""
+      props.item === "" &&
+      props.id === undefined
     ) {
+      // console.log("if");
       setItems(imagesList.slice(0, 20));
       setHasmore(true);
     } else {
@@ -45,20 +50,29 @@ const GalleryImages = (props) => {
       setImageList(filteredImages);
     }
   }, [props]);
+
   useEffect(() => {
     setItems(imagesList.slice(initial, final));
   }, []);
+
   const fetchMoreData = () => {
-    // a fake async api call like which sends
-    // 20 more records in 1.5 secs
+    console.log(initial, final, imagelist);
     let initialC = initial;
     let finalC = final;
-    setInitial(initialC + 20);
-    setFinal(finalC + 20);
-    console.log(imagelist, initialC, finalC);
+    if (items.length <= 20) {
+      initialC = 0;
+      finalC = items.length;
+      setInitial(0);
+      setFinal(items.length);
+    } else {
+      setInitial(initialC + 20);
+      setFinal(finalC + 20);
+    }
+
     if (items.length === imagelist.length) {
       setHasmore(false);
     }
+    // console.log(initialC, finalC);
     setTimeout(() => {
       setItems(items.concat(imagelist.slice(initialC + 20, finalC + 20)));
     }, 1500);
@@ -78,14 +92,17 @@ const GalleryImages = (props) => {
           </p>
         }
       >
-        <Grid container className={classes.grid} spacing={3}>
+        <Grid container className={classes.grid} spacing={2}>
           {items.map((image, index) => (
-            <Grid item lg={4} md={6} xs={12}>
+            <Grid item lg={4} md={6} xs={12} key={index}>
               <img
                 src={process.env.PUBLIC_URL + `/Gallery/${image.name}`}
                 width="100%"
                 alt="Galleryimage"
               />
+              <h4 className={classes.imageName}>
+                {image.name.replace(".jpg", "")}
+              </h4>
             </Grid>
           ))}
         </Grid>

@@ -14,15 +14,7 @@ const Home = () => {
       <Hero />
       <WelcomeApeYachtClub />
       <Divider classes={{ root: "divider" }} />
-      <Specs />
-      <Divider classes={{ root: "divider" }} />
-      <WelcomeClub />
-      <Divider classes={{ root: "divider" }} />
-      <Bathroom />
-      <Divider classes={{ root: "divider" }} />
       <Roadmap />
-      <Divider classes={{ root: "divider" }} />
-      <CommunityTools />
       <Divider classes={{ root: "divider" }} />
       <Team />
     </div>

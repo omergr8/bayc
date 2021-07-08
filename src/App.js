@@ -16,10 +16,10 @@ function App() {
           </Switch>
         </Router>
       </div>
-      <div className="footerContainer">
+      {/* <div className="footerContainer">
         <Footer />
       </div>
-      <div className="secondaryFooter"></div>
+      <div className="secondaryFooter"></div> */}
     </div>
   );
 }

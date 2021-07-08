@@ -1,8 +1,9 @@
 import heroImage from "../../../Assets/Banner.png";
+import heroImageGif from "../../../Assets/Banner-Video.gif";
 const Hero = () => {
   return (
     <div>
-      <img src={heroImage} width="100%" alt="heroImage" />
+      <img src={heroImageGif} width="100%" alt="heroImage" />
     </div>
   );
 };

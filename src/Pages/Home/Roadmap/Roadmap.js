@@ -5,13 +5,17 @@ import shirt from "../../../Assets/shirt.png";
 const Roadmap = () => {
   return (
     <div className={classes.cMain}>
-      <h1>ROADMAP ACTIVATIONS</h1>
-      <p>We’re in this for the long haul.</p>
+      <h1>ROADMAP</h1>
+
       <p>
-        We’ve set up some goalposts for ourselves. Once we hit a target sell
-        through percentage, we will begin to work on realizing the stated goal.
+        HighSteaks NFT currently remains as a collection of fun and witty art
+        pieces. We are however exploring the options of creating a comic book
+        series that dives deeper into the storylines of the steaks and all the
+        risky adventures they encounter as a group. Another idea is to create a
+        fighting game called "Beat the Meat". Both options will only be explore
+        if the project sells 100% of the NFTs
       </p>
-      <Grid container spacing={0}>
+      {/* <Grid container spacing={0}>
         <Grid item xl={8} md={8} xs={12}>
           <List />
         </Grid>
@@ -20,7 +24,7 @@ const Roadmap = () => {
             <img src={shirt} width="360" height="350" alt="shirt" />
           </div>
         </Grid>
-      </Grid>
+      </Grid> */}
     </div>
   );
 };

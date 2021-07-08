@@ -3,7 +3,10 @@ import { Grid, Button } from "@material-ui/core";
 const Banner = () => {
   return (
     <div className={classes.banner}>
-      <Grid
+      <div className={classes.bannerText}>
+        <h2>GET YOUR HIGHSTEAKS</h2>
+      </div>
+      {/* <Grid
         className={classes.grid}
         container
         justify="center"
@@ -27,7 +30,7 @@ const Banner = () => {
             </Button>
           </div>
         </Grid>
-      </Grid>
+      </Grid> */}
     </div>
   );
 };

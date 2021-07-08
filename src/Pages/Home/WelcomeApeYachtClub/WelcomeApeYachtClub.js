@@ -30,26 +30,32 @@ const WelcomeApeYachtClub = () => {
             {/* <h1 className={classes.heading1}>WELCOME TO THE</h1>{" "}
             <h1 className={classes.heading2}>BORED APE YACHT CLUB</h1> */}
             <h1 className={classes.heading1}>
-              WELCOME TO THE <br /> BORED APE YACHT CLUB
+              GET BAKED WITH <br /> THESE HIGHSTEAKS
             </h1>
             <p>
-              BAYC is a collection of 10,000 Bored Ape NFTs—unique digital
-              collectibles living on the Ethereum blockchain. Your Bored Ape
-              doubles as your Yacht Club membership card, and grants access to
-              members-only benefits, the first of which is access to THE
-              BATHROOM, a collaborative graffiti board. Future areas and perks
-              can be unlocked by the community through roadmap activation.
+              HighSteaks consists of 5000 limited edition NFT digital
+              collectibles living on the Cardano Blockchain. Each HighSteak
+              character has a backstory to tell and a unique personality that's
+              designed to be both fun and artistic. The characters, backgrounds,
+              and accessories are carefully designed and randomized using an
+              algorithm which produces random and completely unique NFT
+              artworks.
             </p>
           </Grid>
           <Grid item xs={12} md={5} lg={5}>
-            <Grid container spacing={1}>
+            {/* <Grid container spacing={1}>
               {tileData.map((tile) => (
                 <Grid item xs={6} key={tile.img}>
                   {" "}
                   <img width="80%" src={tile.img} alt={tile.title} />
                 </Grid>
               ))}
-            </Grid>
+            </Grid> */}
+            <img
+              src="https://res.cloudinary.com/de1v32nv0/image/upload/v1625739561/High%20steaks/meat_collection_c9u3rr.jpg"
+              alt="meat"
+              width="100%"
+            />
           </Grid>
         </Grid>
         <FairDistribution />

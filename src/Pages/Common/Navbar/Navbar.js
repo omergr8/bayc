@@ -164,51 +164,26 @@ export default function Navbar() {
   };
   const iconsButton = (
     <>
-      <IconButton
-        className={classes.linkIcon}
-        aria-label="show 4 new mails"
-        color="inherit"
-      >
-        <YouTubeIcon style={{ fontSize: 18 }} />
-      </IconButton>
-      <IconButton
-        className={classes.linkIcon}
-        aria-label="show 17 new notifications"
-        color="inherit"
-      >
-        <InstagramIcon style={{ fontSize: 18 }} />
-      </IconButton>
-      <IconButton
-        className={classes.linkIcon}
-        aria-label="show 4 new mails"
-        color="inherit"
-      >
-        {/* <YouTubeIcon style={{ fontSize: 18 }} /> */}
-        <img src={discord} width="18px" alt="discordIcon" />
-      </IconButton>
-      <IconButton
-        className={classes.linkIcon}
-        aria-label="show 17 new notifications"
-        color="inherit"
-      >
-        <TwitterIcon style={{ fontSize: 18 }} />
-      </IconButton>
+      <Link href="https://discord.gg/c8qdzux5">
+        <IconButton
+          className={classes.linkIcon}
+          aria-label="show 4 new mails"
+          color="inherit"
+        >
+          <img src={discord} width="18px" alt="discordIcon" />
+        </IconButton>
+      </Link>
+      <Link href="https://twitter.com/HighSteaksNft">
+        <IconButton
+          className={classes.linkIcon}
+          aria-label="show 17 new notifications"
+        >
+          <TwitterIcon style={{ fontSize: 18, color: "white" }} />
+        </IconButton>
+      </Link>
     </>
   );
-  const membersMenu = (
-    <Menu
-      id="simple-menu"
-      anchorEl={anchorEl}
-      keepMounted
-      open={Boolean(anchorEl)}
-      onClose={handleClose}
-      className={classes.menuLinks}
-    >
-      <MenuItem onClick={handleClose}>Kennel club</MenuItem>
-      <MenuItem onClick={handleClose}>Merch</MenuItem>
-      <MenuItem onClick={handleClose}>Bathroom</MenuItem>
-    </Menu>
-  );
+
   const list = (
     <div className={classes.list}>
       <div className={classes.mobileLogo}>
@@ -219,46 +194,16 @@ export default function Navbar() {
 
       <List>
         <ListItem button>
-          <ListItemText primary="BUY AN APE" />
+          <ListItemText primary="BUY A STEAK" />
         </ListItem>
         <ListItem button>
           <ListItemText primary="ROADMAP" />
         </ListItem>
         <ListItem button>
-          <ListItemText primary="TEAM" />
+          <ListItemText primary="CHARACTERS" />
         </ListItem>
         <ListItem button>
-          <ListItemText primary="GALLERY" />
-        </ListItem>
-        <ListItem button>
-          <ListItemText primary="PROVENANCE" />
-        </ListItem>
-        <ListItem button>
-          <NativeSelect
-            className={classes.selectMobile}
-            classes={{
-              icon: classes.iconMobile,
-            }}
-            value={members}
-            name="members"
-            onChange={handleChange}
-            inputProps={{
-              "aria-label": "members",
-            }}
-          >
-            <option className={classes.selectOptions} value="" disabled>
-              MEMBERS
-            </option>
-            <option className={classes.selectOptions} value="Kennel club">
-              Kennel club
-            </option>
-            <option className={classes.selectOptions} value="Merch">
-              Merch
-            </option>
-            <option className={classes.selectOptions} value="Bathroom">
-              Bathroom
-            </option>
-          </NativeSelect>
+          <ListItemText primary="RARITIES" />
         </ListItem>
       </List>
       <Divider />
@@ -281,7 +226,7 @@ export default function Navbar() {
     <ul className={classes.menu}>
       <li>
         <Link className={classes.anchorList} href="#" onClick={preventDefault}>
-          buy an ape
+          BUY A STEAK
         </Link>
       </li>
       <li>
@@ -291,45 +236,13 @@ export default function Navbar() {
       </li>
       <li>
         <Link className={classes.anchorList} href="#" onClick={preventDefault}>
-          team
+          CHARACTERS
         </Link>
       </li>
       <li>
         <RoterLink className={classes.anchorList} to="/gallery">
-          Gallery
+          RARITIES
         </RoterLink>
-      </li>
-      <li>
-        <Link className={classes.anchorList} href="#" onClick={preventDefault}>
-          Provenance
-        </Link>
-      </li>
-      <li>
-        <NativeSelect
-          className={classes.selectEmpty}
-          classes={{
-            icon: classes.icon,
-          }}
-          value={members}
-          name="members"
-          onChange={handleChange}
-          inputProps={{
-            "aria-label": "members",
-          }}
-        >
-          <option className={classes.selectOptions} value="" disabled>
-            MEMBERS
-          </option>
-          <option className={classes.selectOptions} value="Kennel club">
-            Kennel club
-          </option>
-          <option className={classes.selectOptions} value="Merch">
-            Merch
-          </option>
-          <option className={classes.selectOptions} value="Bathroom">
-            Bathroom
-          </option>
-        </NativeSelect>
       </li>
     </ul>
   );
@@ -361,7 +274,6 @@ export default function Navbar() {
         </Toolbar>
       </AppBar>
       {renderMobileMenu}
-      {membersMenu}
     </div>
   );
 }

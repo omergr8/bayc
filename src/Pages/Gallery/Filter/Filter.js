@@ -31,6 +31,10 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "13px",
   },
   inputField: {
+    color: "#BFC500 !important",
+    "& .MuiInput": {
+      color: "#BFC500 !important",
+    },
     "& .MuiInput-underline:before": {
       borderBottomColor: "#BFC500 !important",
     },
@@ -43,6 +47,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   cssOutlinedInput: {
+    color: "#BFC500 !important",
     "&$cssFocused $notchedOutline": {
       borderColor: `#BFC500 !important`,
     },
@@ -55,11 +60,13 @@ const useStyles = makeStyles((theme) => ({
   },
 
   notchedOutline: {
-    borderWidth: "1px",
+    borderWidth: "10px",
+    color: "#BFC500 !important",
     borderColor: "#BFC500 !important",
   },
   icon: {
     fill: "#BFC500",
+    color: "#BFC500 !important",
   },
   formControl: {
     minWidth: 180,
@@ -80,10 +87,11 @@ const Filter = () => {
   const [lefthand, setLeftHand] = useState("");
   const [wrist, setWrist] = useState("");
   const [item, setItem] = useState("");
-  console.log(character);
+  const [id, setId] = useState("");
+
   const classes2 = useStyles();
   const handleChange = (event) => {
-    console.log(event.target.name);
+    console.log(event.target.name, event.target.value);
     if (event.target.name === "background") {
       setBackground(event.target.value);
     } else if (event.target.name === "character") {
@@ -98,6 +106,15 @@ const Filter = () => {
       setWrist(event.target.value);
     } else if (event.target.name === "item") {
       setItem(event.target.value);
+    } else if (event.target.name === "id") {
+      setId(event.target.value);
+      setBackground("");
+      setCharacter("");
+      setMouth("");
+      setRightHand("");
+      setLeftHand("");
+      setWrist("");
+      setItem("");
     }
   };
   const resetFilter = () => {
@@ -108,13 +125,17 @@ const Filter = () => {
     setLeftHand("");
     setWrist("");
     setItem("");
+    setId("");
   };
+  React.useEffect(() => {
+    console.log(id);
+  }, [id]);
   return (
     <div>
       <Grid container spacing={3}>
         <Grid item lg={3} xs={12}>
           <div className={classes.cMain}>
-            <h2>Gallery</h2>
+            <h2>Rarities</h2>
             <FormControl className={classes2.formControl}>
               <Select
                 value={character}
@@ -282,7 +303,30 @@ const Filter = () => {
                 ))}
               </Select>
             </FormControl>
-
+            <FormControl className={classes2.formControl}>
+              <TextField
+                id="standard-number"
+                label="BY ID"
+                value={id}
+                onChange={handleChange}
+                name="id"
+                type="number"
+                className={classes2.inputField}
+                InputLabelProps={{
+                  classes: {
+                    root: classes2.cssLabel,
+                    focused: classes2.cssFocused,
+                  },
+                }}
+                InputProps={{
+                  classes: {
+                    root: classes2.cssOutlinedInput,
+                    focused: classes2.cssFocused,
+                  },
+                  inputMode: "numeric",
+                }}
+              />
+            </FormControl>
             <Button
               className={classes.resetButton}
               onClick={resetFilter}
@@ -301,6 +345,7 @@ const Filter = () => {
             lefthand={lefthand}
             wrist={wrist}
             item={item}
+            id={id}
           />
         </Grid>
       </Grid>

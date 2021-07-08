@@ -1,6 +1,9 @@
 import { imagesList } from "./Image";
+
 export const filterGalleryImages = (props) => {
-  console.log(props);
+  const regex = new RegExp(`${props.id}`);
+  // console.log(regex);
+  // console.log();
   var result = imagesList.filter((image) => {
     if (
       props.background !== "" &&
@@ -1138,6 +1141,19 @@ export const filterGalleryImages = (props) => {
         image.Accessories.LeftHand === props.lefthand &&
         image.Accessories.Wrist === props.wrist
       );
+    } else if (
+      props.background === "" &&
+      props.character === "" &&
+      props.mouth === "" &&
+      props.righthand === "" &&
+      props.lefthand === "" &&
+      props.wrist === "" &&
+      props.item === "" &&
+      props.id !== undefined
+    ) {
+      // console.log(props.id, image.name);
+      //  return image.name === props.background;
+      return regex.test(image.name);
     }
   });
 

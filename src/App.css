@@ -12,6 +12,7 @@
 }
 .main {
   background-color: black;
+  min-height: 721px !important;
 }
 .divider {
   background: #3b3b3b !important;
