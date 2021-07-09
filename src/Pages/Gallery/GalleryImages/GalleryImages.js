@@ -12,9 +12,10 @@ const GalleryImages = (props) => {
   const [hasmore, setHasmore] = useState(true);
   const [imagelist, setImageList] = useState(imagesList);
   const [items, setItems] = useState(imagelist.slice(initial, final));
+  const [totalImagesFound, setTotalImagesFound] = useState("");
   useEffect(() => {
     const filteredImages = filterGalleryImages(props);
-
+    setTotalImagesFound(filteredImages.length);
     setInitial(0);
     setFinal(20);
     if (filteredImages.length <= 20) {
@@ -53,6 +54,7 @@ const GalleryImages = (props) => {
 
   useEffect(() => {
     setItems(imagesList.slice(initial, final));
+    setTotalImagesFound(imagesList.length);
   }, []);
 
   const fetchMoreData = () => {
@@ -80,6 +82,9 @@ const GalleryImages = (props) => {
 
   return (
     <div>
+      <h2 className={classes.totalImages}>
+        Total: {totalImagesFound} Images Found.
+      </h2>
       <InfiniteScroll
         className={classes.grid}
         dataLength={items.length} //This is important field to render the next data

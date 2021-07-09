@@ -22,51 +22,51 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
   select: {
     "&:before": {
-      borderColor: "#BFC500",
+      borderColor: "#33401c",
     },
     "&:after": {
-      borderColor: "#BFC500",
+      borderColor: "#33401c",
     },
-    color: "#BFC500",
+    color: "#33401c",
     fontSize: "13px",
   },
   inputField: {
-    color: "#BFC500 !important",
+    color: "#33401c !important",
     "& .MuiInput": {
-      color: "#BFC500 !important",
+      color: "#33401c !important",
     },
     "& .MuiInput-underline:before": {
-      borderBottomColor: "#BFC500 !important",
+      borderBottomColor: "#33401c !important",
     },
     "& .MuiInput-underline:after": {
-      borderBottomColor: "#BFC500 !important",
+      borderBottomColor: "#33401c !important",
     },
   },
   cssLabel: {
-    color: "#BFC500",
+    color: "#33401c",
   },
 
   cssOutlinedInput: {
-    color: "#BFC500 !important",
+    color: "#33401c !important",
     "&$cssFocused $notchedOutline": {
-      borderColor: `#BFC500 !important`,
+      borderColor: `#33401c !important`,
     },
   },
 
   cssFocused: {
-    color: "#BFC500 !important",
-    borderColor: "#BFC500 !important",
-    borderBottom: "#BFC500 !important",
+    color: "#33401c !important",
+    borderColor: "#33401c !important",
+    borderBottom: "#33401c !important",
   },
 
   notchedOutline: {
     borderWidth: "10px",
-    color: "#BFC500 !important",
-    borderColor: "#BFC500 !important",
+    color: "#33401c !important",
+    borderColor: "#33401c !important",
   },
   icon: {
-    fill: "#BFC500",
-    color: "#BFC500 !important",
+    fill: "#33401c",
+    color: "#33401c !important",
   },
   formControl: {
     minWidth: 180,
@@ -332,7 +332,7 @@ const Filter = () => {
               onClick={resetFilter}
               variant="contained"
             >
-              reset filters
+              reset
             </Button>
           </div>
         </Grid>

@@ -1,11 +1,8 @@
 import { Divider } from "@material-ui/core";
 import Hero from "./Hero/Hero";
 import WelcomeApeYachtClub from "./WelcomeApeYachtClub/WelcomeApeYachtClub";
-import Specs from "./Specs/Specs";
-import WelcomeClub from "./WelcomeClub/WelcomeClub";
-import Bathroom from "./Bathroom/Bathroom";
 import Roadmap from "./Roadmap/Roadmap";
-import CommunityTools from "./CommunityTools/CommunityTools";
+import Faq from "./Faq/Faq";
 import Team from "./Team/Team";
 
 const Home = () => {
@@ -17,6 +14,8 @@ const Home = () => {
       <Roadmap />
       <Divider classes={{ root: "divider" }} />
       <Team />
+      <Divider classes={{ root: "divider" }} />
+      <Faq />
     </div>
   );
 };

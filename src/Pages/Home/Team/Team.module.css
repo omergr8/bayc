@@ -9,7 +9,9 @@ p {
   text-align: left;
 }
 .cMain p span {
-  color: #bfc500;
+  color: #33401c;
+  font-weight: 700;
+  font-size: 17px;
 }
 .teamFooter {
   color: white;

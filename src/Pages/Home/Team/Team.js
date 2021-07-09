@@ -6,7 +6,7 @@ const WelcomeApeYachtClub = () => {
   return (
     <>
       <div className={classes.cMain}>
-        <h1 className={classes.heading1}>THE TEAM</h1>
+        <h1 className={classes.heading1}>CHARACTERS</h1>
         <p>
           <span>Round</span> - The fattest of all the High Steaks. He eats more
           than his fair share of the group's edibles. All of the other High

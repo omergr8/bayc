@@ -9,7 +9,7 @@ p {
   text-align: left;
 }
 .shirtBackground {
-  background: #bfc500 !important;
+  background: #33401c !important;
   width: 300px;
   height: 300px;
   /* margin-left: 50px; */
@@ -25,7 +25,7 @@ p {
   padding-right: 30px;
 }
 .listData p:first-child {
-  color: #bfc500;
+  color: #33401c;
   font-style: italic;
 }
 .listData p:nth-child(2) {
