@@ -11,7 +11,7 @@
 .fairHeading {
   line-height: 15px;
   font-style: italic;
-  color: #33401c;
+  color: #789c3d;
 }
 .fairPara {
   line-height: 15px;
@@ -24,7 +24,7 @@
 }
 .banner {
   min-height: 120px;
-  background-color: #33401c;
+  background-color: #789c3d;
   color: black;
   margin-bottom: 40px;
   display: flex;
@@ -47,7 +47,7 @@
 }
 .buyButton {
   background-color: black !important;
-  color: #33401c !important;
+  color: #789c3d !important;
   max-width: 200px !important;
 }
 @media only screen and (max-width: 1055px) {

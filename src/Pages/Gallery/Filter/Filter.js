@@ -22,51 +22,51 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
   select: {
     "&:before": {
-      borderColor: "#33401c",
+      borderColor: "#789c3d",
     },
     "&:after": {
-      borderColor: "#33401c",
+      borderColor: "#789c3d",
     },
-    color: "#33401c",
+    color: "#789c3d",
     fontSize: "13px",
   },
   inputField: {
-    color: "#33401c !important",
+    color: "#789c3d !important",
     "& .MuiInput": {
-      color: "#33401c !important",
+      color: "#789c3d !important",
     },
     "& .MuiInput-underline:before": {
-      borderBottomColor: "#33401c !important",
+      borderBottomColor: "#789c3d !important",
     },
     "& .MuiInput-underline:after": {
-      borderBottomColor: "#33401c !important",
+      borderBottomColor: "#789c3d !important",
     },
   },
   cssLabel: {
-    color: "#33401c",
+    color: "#789c3d",
   },
 
   cssOutlinedInput: {
-    color: "#33401c !important",
+    color: "#789c3d !important",
     "&$cssFocused $notchedOutline": {
-      borderColor: `#33401c !important`,
+      borderColor: `#789c3d !important`,
     },
   },
 
   cssFocused: {
-    color: "#33401c !important",
-    borderColor: "#33401c !important",
-    borderBottom: "#33401c !important",
+    color: "#789c3d !important",
+    borderColor: "#789c3d !important",
+    borderBottom: "#789c3d !important",
   },
 
   notchedOutline: {
     borderWidth: "10px",
-    color: "#33401c !important",
-    borderColor: "#33401c !important",
+    color: "#789c3d !important",
+    borderColor: "#789c3d !important",
   },
   icon: {
-    fill: "#33401c",
-    color: "#33401c !important",
+    fill: "#789c3d",
+    color: "#789c3d !important",
   },
   formControl: {
     minWidth: 180,

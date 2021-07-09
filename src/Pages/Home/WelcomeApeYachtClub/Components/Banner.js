@@ -1,12 +1,18 @@
 import classes from "../WelcomeApeYachtClub.module.css";
-import { Grid, Button } from "@material-ui/core";
+import { Grid, Button, Link } from "@material-ui/core";
 const Banner = () => {
   return (
-    <div className={classes.banner}>
-      <div className={classes.bannerText}>
-        <h2>GET YOUR HIGHSTEAKS</h2>
-      </div>
-      {/* <Grid
+    <Link
+      className={classes.anchorList2}
+      href="https://www.highsteaksnft.com/buy"
+      target="_blank"
+    >
+      <div className={classes.banner}>
+        <div className={classes.bannerText}>
+          <h2>GET YOUR HIGHSTEAKS</h2>
+        </div>
+
+        {/* <Grid
         className={classes.grid}
         container
         justify="center"
@@ -31,7 +37,8 @@ const Banner = () => {
           </div>
         </Grid>
       </Grid> */}
-    </div>
+      </div>
+    </Link>
   );
 };
 export default Banner;

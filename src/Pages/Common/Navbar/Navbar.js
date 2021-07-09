@@ -77,6 +77,10 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "uppercase",
     fontStyle: "italic",
   },
+  anchorList2: {
+    textDecoration: "none !important",
+    color: "white !important",
+  },
   menuButtonLink: {
     display: "block",
     padding: "0px 15px",
@@ -164,7 +168,7 @@ export default function Navbar() {
   };
   const iconsButton = (
     <>
-      <Link href="https://discord.gg/c8qdzux5">
+      <Link href="https://discord.gg/c8qdzux5" target="_blank">
         <IconButton
           className={classes.linkIcon}
           aria-label="show 4 new mails"
@@ -173,7 +177,7 @@ export default function Navbar() {
           <img src={discord} width="18px" alt="discordIcon" />
         </IconButton>
       </Link>
-      <Link href="https://twitter.com/HighSteaksNft">
+      <Link href="https://twitter.com/HighSteaksNft" target="_blank">
         <IconButton
           className={classes.linkIcon}
           aria-label="show 17 new notifications"
@@ -194,7 +198,13 @@ export default function Navbar() {
 
       <List>
         <ListItem button>
-          <ListItemText primary="BUY A STEAK" />
+          <Link
+            className={classes.anchorList2}
+            href="https://www.highsteaksnft.com/buy"
+            target="_blank"
+          >
+            <ListItemText primary="BUY A STEAK" />
+          </Link>
         </ListItem>
         <ListItem button>
           <ListItemText primary="ROADMAP" />
@@ -225,7 +235,11 @@ export default function Navbar() {
   const links = (
     <ul className={classes.menu}>
       <li>
-        <Link className={classes.anchorList} href="#" onClick={preventDefault}>
+        <Link
+          className={classes.anchorList}
+          href="https://www.highsteaksnft.com/buy"
+          target="_blank"
+        >
           BUY A STEAK
         </Link>
       </li>
