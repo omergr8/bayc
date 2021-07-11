@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./Pages/Common/Navbar/Navbar";
 import Home from "./Pages/Home/Home";
 import Gallery from "./Pages/Gallery/Gallery";
-import Footer from "./Pages/Common/Footer/Footer";
+
 function App() {
   return (
     <div className="main">
@@ -16,10 +16,6 @@ function App() {
           </Switch>
         </Router>
       </div>
-      {/* <div className="footerContainer">
-        <Footer />
-      </div>
-      <div className="secondaryFooter"></div> */}
     </div>
   );
 }

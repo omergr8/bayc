@@ -2,8 +2,7 @@ import { imagesList } from "./Image";
 
 export const filterGalleryImages = (props) => {
   const regex = new RegExp(`${props.id}`);
-  // console.log(regex);
-  // console.log();
+
   var result = imagesList.filter((image) => {
     if (
       props.background !== "" &&
@@ -1151,8 +1150,6 @@ export const filterGalleryImages = (props) => {
       props.item === "" &&
       props.id !== undefined
     ) {
-      // console.log(props.id, image.name);
-      //  return image.name === props.background;
       return regex.test(image.name);
     }
   });

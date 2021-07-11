@@ -1,4 +1,3 @@
-import heroImage from "../../../Assets/Banner.png";
 import heroImageGif from "../../../Assets/Banner-Video.gif";
 const Hero = () => {
   return (

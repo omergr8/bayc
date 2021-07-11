@@ -2,12 +2,14 @@
   color: white;
   /* text-align: left; */
   padding-bottom: 30px;
-  margin-top: 30px;
+  padding-top: 30px;
 }
 .cMain h1,
 p {
   text-align: left;
 }
-.gridImage {
-  margin-top: 30px;
+.cMain p span {
+  color: #789c3d;
+  font-weight: 700;
+  font-size: 17px;
 }

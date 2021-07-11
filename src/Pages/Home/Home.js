@@ -1,19 +1,23 @@
 import { Divider } from "@material-ui/core";
 import Hero from "./Hero/Hero";
-import WelcomeApeYachtClub from "./WelcomeApeYachtClub/WelcomeApeYachtClub";
+import BakedHighsteaks from "./BakedHighsteaks/BakedHighsteaks";
 import Roadmap from "./Roadmap/Roadmap";
 import Faq from "./Faq/Faq";
-import Team from "./Team/Team";
-
+import Characters from "./Characters/Characters";
+import { Element } from "react-scroll";
 const Home = () => {
   return (
     <div>
       <Hero />
-      <WelcomeApeYachtClub />
+      <BakedHighsteaks />
       <Divider classes={{ root: "divider" }} />
-      <Roadmap />
+      <Element id="roadmap" name="roadmap">
+        <Roadmap id="roadmap" />
+      </Element>
       <Divider classes={{ root: "divider" }} />
-      <Team />
+      <Element id="characters" name="characters">
+        <Characters id="characters" />
+      </Element>
       <Divider classes={{ root: "divider" }} />
       <Faq />
     </div>

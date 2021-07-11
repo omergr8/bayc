@@ -1,33 +1,24 @@
 import React from "react";
-import { fade, makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import {
   AppBar,
   Link,
-  Button,
-  NativeSelect,
   Drawer,
   List,
   Divider,
   ListItem,
-  ListItemIcon,
   ListItemText,
 } from "@material-ui/core";
 import { Link as RoterLink } from "react-router-dom";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
-import InputBase from "@material-ui/core/InputBase";
-import Badge from "@material-ui/core/Badge";
-import MenuItem from "@material-ui/core/MenuItem";
-import Menu from "@material-ui/core/Menu";
 import MenuIcon from "@material-ui/icons/Menu";
-import YouTubeIcon from "@material-ui/icons/YouTube";
-import InstagramIcon from "@material-ui/icons/Instagram";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import discord from "../../../Assets/discord.png";
-import MailIcon from "@material-ui/icons/Mail";
-import NotificationsIcon from "@material-ui/icons/Notifications";
 import logo from "../../../Assets/logo2.0.png";
+import { HashLink } from "react-router-hash-link";
+
 const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
@@ -146,10 +137,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Navbar() {
   const classes = useStyles();
-  const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
-  const [members, setMembers] = React.useState("");
-  const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
   const handleMobileMenuClose = () => {
@@ -160,15 +148,10 @@ export default function Navbar() {
     setMobileMoreAnchorEl(event.currentTarget);
   };
   const preventDefault = (event) => event.preventDefault();
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-  const handleChange = (event) => {
-    setMembers(event.target.value);
-  };
+
   const iconsButton = (
     <>
-      <Link href="https://discord.gg/c8qdzux5" target="_blank">
+      <Link href="https://discord.gg/sKmfjN3zAS" target="_blank">
         <IconButton
           className={classes.linkIcon}
           aria-label="show 4 new mails"
@@ -191,29 +174,37 @@ export default function Navbar() {
   const list = (
     <div className={classes.list}>
       <div className={classes.mobileLogo}>
-        <Typography variant="h6" noWrap>
-          <img width="150px" src={logo} alt="logo" />
-        </Typography>
+        <RoterLink to="/">
+          <Typography variant="h6" noWrap>
+            <img width="150px" src={logo} alt="logo" />
+          </Typography>
+        </RoterLink>
       </div>
 
       <List>
         <ListItem button>
           <Link
             className={classes.anchorList2}
-            href="https://www.highsteaksnft.com/buy"
+            href="https://buy.highsteaksnft.com/"
             target="_blank"
           >
             <ListItemText primary="BUY A STEAK" />
           </Link>
         </ListItem>
         <ListItem button>
-          <ListItemText primary="ROADMAP" />
+          <HashLink to="/#roadmap" className={classes.anchorList2}>
+            <ListItemText primary="ROADMAP" />
+          </HashLink>
         </ListItem>
         <ListItem button>
-          <ListItemText primary="CHARACTERS" />
+          <HashLink to="/#characters" className={classes.anchorList2}>
+            <ListItemText primary="CHARACTERS" />
+          </HashLink>
         </ListItem>
         <ListItem button>
-          <ListItemText primary="RARITIES" />
+          <RoterLink className={classes.anchorList2} to="/gallery">
+            <ListItemText primary="RARITIES" />
+          </RoterLink>
         </ListItem>
       </List>
       <Divider />
@@ -237,21 +228,21 @@ export default function Navbar() {
       <li>
         <Link
           className={classes.anchorList}
-          href="https://www.highsteaksnft.com/buy"
+          href="https://buy.highsteaksnft.com/"
           target="_blank"
         >
           BUY A STEAK
         </Link>
       </li>
       <li>
-        <Link className={classes.anchorList} href="#" onClick={preventDefault}>
+        <HashLink to="/#roadmap" className={classes.anchorList}>
           roadmap
-        </Link>
+        </HashLink>
       </li>
       <li>
-        <Link className={classes.anchorList} href="#" onClick={preventDefault}>
+        <HashLink to="/#characters" className={classes.anchorList}>
           CHARACTERS
-        </Link>
+        </HashLink>
       </li>
       <li>
         <RoterLink className={classes.anchorList} to="/gallery">

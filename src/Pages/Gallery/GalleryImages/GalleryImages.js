@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import classes from "./GalleryImages.module.css";
 import Grid from "@material-ui/core/Grid";
-import { makeStyles } from "@material-ui/core/styles";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { imagesList } from "../../../Constants/Image";
 import { filterGalleryImages } from "../../../Constants/FilterGalleryImages";
@@ -20,15 +19,6 @@ const GalleryImages = (props) => {
     setFinal(20);
     if (filteredImages.length <= 20) {
       setHasmore(false);
-      // setInitial(0);
-      // setFinal(filteredImages.length);
-      // console.log(
-      //   filteredImages.length,
-      //   filteredImages.slice(initial, final),
-      //   filteredImages.slice(0, filteredImages.length),
-      //   initial,
-      //   final
-      // );
     } else {
       setHasmore(true);
     }

@@ -1,8 +1,7 @@
 import React from "react";
-import { Grid, Link } from "@material-ui/core";
-import classes from "./Team.module.css";
+import classes from "./Characters.module.css";
 
-const WelcomeApeYachtClub = () => {
+const Characters = () => {
   return (
     <>
       <div className={classes.cMain}>
@@ -88,27 +87,9 @@ const WelcomeApeYachtClub = () => {
           streets and hustled his way to popularity. A lot of young people can
           relate to his message which is mostly to legalize marijuana.
         </p>
-
-        {/* <Grid container spacing={3}>
-          <Grid item xl={7} md={7} xs={12}>
-            <p>
-              <span>GARGAMEL</span>. STARCRAFT OBSESSED. EATS SMURFS.
-            </p>
-            <p>
-              <span>GORDON GONER</span>. REFORMED LEVERAGE ADDICT.
-            </p>
-            <p>
-              <span>EMPEROR TOMATO KETCHUP</span>. SPENT ALL THEIR MONEY ON
-              FIRST PRESSES AND PET-NAT.
-            </p>
-            <p>
-              <span>NO SASS</span>. HERE FOR THE APES. NOT FOR THE SASS.
-            </p>
-          </Grid>
-        </Grid> */}
       </div>
     </>
   );
 };
 
-export default WelcomeApeYachtClub;
+export default Characters;

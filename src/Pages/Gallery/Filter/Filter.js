@@ -91,7 +91,6 @@ const Filter = () => {
 
   const classes2 = useStyles();
   const handleChange = (event) => {
-    console.log(event.target.name, event.target.value);
     if (event.target.name === "background") {
       setBackground(event.target.value);
     } else if (event.target.name === "character") {
@@ -127,9 +126,7 @@ const Filter = () => {
     setItem("");
     setId("");
   };
-  React.useEffect(() => {
-    console.log(id);
-  }, [id]);
+
   return (
     <div>
       <Grid container spacing={3}>

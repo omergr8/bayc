@@ -1,5 +1,3 @@
-import classes2 from "./Faq.module.css";
-
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Accordion from "@material-ui/core/Accordion";
@@ -9,7 +7,6 @@ import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Grid from "@material-ui/core/Grid";
 import faqImage from "../../../Assets/faq.svg";
-import faqImage2 from "../../../Assets/faq.jpg";
 const useStyles = makeStyles((theme) => ({
   fMain: {
     paddingTop: "30px",
